@@ -27,3 +27,28 @@ function addToDo(toDo, i, complete, remove) {
 
   list.insertAdjacentHTML(position, text);
 }
+
+//enable "enter" key to add to list
+document.addEventListener("keyup", function(event) {
+  if(event.keyCode == 13) {
+    const toDo = input.value;
+    // check if input isn't empty
+    if(toDo){
+      addToDo(toDo, i, false, false);
+      toDoList.push(
+        {
+          name: toDo,
+          i: i,
+          complete: false,
+          remove: false,
+        }
+      );
+      
+      //save list to local storage
+      localStorage.setItem("toDo", JSON.stringify(toDoList));
+      i++;
+      //make input empty
+      input.value = "";
+    }
+  }
+});
