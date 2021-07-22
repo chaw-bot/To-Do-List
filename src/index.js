@@ -52,3 +52,15 @@ document.addEventListener("keyup", function(event) {
     }
   }
 });
+
+//store a task
+let toDoList = [];
+let i = 0;
+
+//task is done
+function completeTask(element) {
+  element.classList.toggle(check);
+  element.classList.toggle(uncheck);
+  element.parentNode.querySelector(".text").classList.toggle(line_through);
+  toDoList[element.i].done = toDoList[element.i].done ? false : true;
+}
