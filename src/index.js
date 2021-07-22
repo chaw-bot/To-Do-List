@@ -64,3 +64,24 @@ function completeTask(element) {
   element.parentNode.querySelector(".text").classList.toggle(line_through);
   toDoList[element.i].done = toDoList[element.i].done ? false : true;
 }
+
+//remove a task
+function removeTask(element) {
+  element.parentNode.parentNode.removeChild(element.parentNode);
+  toDoList[element.i].remove = true;
+}
+
+//target items created dynamically
+list.addEventListener('click', function(event){
+  const element = event.target;
+  const elementJob = element.attributes.job.value;
+
+  if(elementJob == "complete") {
+    completeTask(element);
+  } else if(elementJob == "delete") {
+    removeTask(element);
+  }
+
+  //save list to local storage
+  localStorage.setItem("toDo", JSON.stringify(toDoList));
+});
