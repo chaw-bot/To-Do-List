@@ -85,3 +85,30 @@ list.addEventListener('click', function(event){
   //save list to local storage
   localStorage.setItem("toDo", JSON.stringify(toDoList));
 });
+
+//get  from local storage
+let data = localStorage.getItem("toDo");
+
+//check if data is not empty
+if(data) {
+  toDoList = JSON.parse(data);
+  i = toDoList.length;
+  loadToDo(toDoList);
+} else {
+  toDoList = [];
+  i = 0;
+}
+ 
+//load list
+function loadToDo (array) {
+  array.forEach(function(item){
+    addToDo(item.name, item.i, item.complete, item.remove);
+  });
+}
+
+//clear local storage
+clear.addEventListener('click', function() {
+  localStorage.clear();
+  localStorage.reload();
+  // document.getElementById("list").innerHTML = "";
+});
