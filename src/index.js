@@ -110,5 +110,4 @@ function loadToDo (array) {
 clear.addEventListener('click', function() {
   localStorage.clear();
   localStorage.reload();
-  // document.getElementById("list").innerHTML = "";
 });
