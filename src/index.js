@@ -1,4 +1,3 @@
-
 import _ from 'lodash';
 import './style.css';
 
@@ -19,8 +18,8 @@ function addToDo(toDo, i, complete, remove) {
   const line = complete ? line_through : "";
   
   const text = `<li class="task">
-                  <i class="fa ${done} complete" job="complete" aria-hidden="true" id="${i}"></i>
-                  <p class="text" ${line}>${toDo}</p>
+                  <div class="taskContent"><i class="fa ${done} complete" job="complete" aria-hidden="true" id="${i}"></i>
+                  <p class="text" ${line}>${toDo}</p></div>
                   <i class="fa fa-trash-o delete" job="delete" aria-hidden="true" id="${i}"></i>
                 </li>`;
   const position = "beforeend";
@@ -109,5 +108,5 @@ function loadToDo (array) {
 //clear local storage
 clear.addEventListener('click', function() {
   localStorage.clear();
-  localStorage.reload();
 });
+
