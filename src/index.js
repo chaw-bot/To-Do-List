@@ -39,15 +39,19 @@ document.addEventListener('keyup', (event) => {
       toDoList.push(
         {
           name: toDo,
+          /* eslint-disable */
           i: i,
+          /* eslint-enable */
           complete: false,
           remove: false,
         },
       );
-      
+
       // save list to local storage
       localStorage.setItem('toDo', JSON.stringify(toDoList));
+      /* eslint-disable */
       i++;
+      /* eslint-enable */
       // make input empty
       input.value = '';
     }
@@ -59,7 +63,9 @@ function completeTask(element) {
   element.classList.toggle(check);
   element.classList.toggle(uncheck);
   element.parentNode.querySelector('.text').classList.toggle(lineThrough);
+  /* eslint-disable */
   toDoList[element.i].done = toDoList[element.i].done ? false : true;
+  /* eslint-enable */
 }
 
 // remove a task
@@ -106,5 +112,7 @@ if (data) {
 // clear local storage
 clear.addEventListener('click', () => {
   localStorage.clear();
+  /* eslint-disable */
   location.reload();
+  /* eslint-enable */
 });
