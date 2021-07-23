@@ -42,7 +42,7 @@ document.addEventListener('keyup', (event) => {
           i: i,
           complete: false,
           remove: false,
-        }
+        },
       );
       
       // save list to local storage
@@ -69,13 +69,13 @@ function removeTask(element) {
 }
 
 // target items created dynamically
-list.addEventListener('click', function(event){
+list.addEventListener('click', (event) => {
   const element = event.target;
   const elementJob = element.attributes.job.value;
 
-  if (elementJob == 'complete') {
+  if (elementJob === 'complete') {
     completeTask(element);
-  } else if(elementJob == 'delete') {
+  } else if (elementJob === 'delete') {
     removeTask(element);
   }
 
@@ -84,9 +84,16 @@ list.addEventListener('click', function(event){
 });
 
 // get  from local storage
-let data = localStorage.getItem('toDo');
+const data = localStorage.getItem('toDo');
+ 
+// load list
+function loadToDo (array) {
+  array.forEach(function(item){
+    addToDo(item.name, item.i, item.complete, item.remove);
+  });
+}
 
-//check if data is not empty
+// check if data is not empty
 if (data) {
   toDoList = JSON.parse(data);
   i = toDoList.length;
@@ -94,13 +101,6 @@ if (data) {
 } else {
   toDoList = [];
   i = 0;
-}
- 
-// load list
-function loadToDo (array) {
-  array.forEach(function(item){
-    addToDo(item.name, item.i, item.complete, item.remove);
-  });
 }
 
 // clear local storage
