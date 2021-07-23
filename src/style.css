@@ -44,6 +44,10 @@ body {
   gap: 10px;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .task {
   display: flex;
   align-items: center;
