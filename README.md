@@ -4,25 +4,27 @@
 
 # Web Preview
 
-![screenshot](...)
+![screenshot](images/toDo.png)
 
 
 ## Built With
 
 - HTML
 - CSS
-- JAVASCRIPT
+- JavaScript
 
 ## Live Demo
 
-[Live Demo](https://chaw-bot.github.io/To-Do-List/)
+[Live Demo]()
 
 # Install Instruction
 1. Open your terminal and `cd` to a proper location.
 2. Clone the Repo on you computer using `git clone git@github.com:chaw-bot/To-Do-List.git`
 3. Make sure you have JavaScript installed; use `js -v` .
 4. Cd to the project directory`cd To-Do-List` .
-5. Open `index.html`.
+5. Use `node -v` to check if you have node instaled
+6. Install the dependencies in the local node_modules folder with `npm install`
+7. Then `npm start`
 
 ## Authors
 
