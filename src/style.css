@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+}
+
+.title {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 3%;
+}
+
+.addTask {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 3%;
+}
+
+#input {
+  border: none;
+  font-style: italic;
+  width: 90%;
+  display: inline;
+}
+
+#list {
+  display: contents;
+}
+
+.taskContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d3d3d3;
+  justify-content: space-between;
+}
+
+/* .delete {
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: red;
+} */
+
+.clear {
+  border: none;
+  width: 100%;
+  height: 5vh;
+}
+
+.clear:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
