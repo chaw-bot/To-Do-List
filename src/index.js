@@ -6,7 +6,7 @@ const input = document.getElementById('input');
 const clear = document.querySelector('.clear');
 const check = "fa-check-circle";
 const uncheck = "fa-circle-thin";
-const line_through = "lineThrough";
+const line_through = "line-through";
 
 // Add task to list
 function addToDo(toDo, i, complete, remove) {
@@ -108,5 +108,5 @@ function loadToDo (array) {
 //clear local storage
 clear.addEventListener('click', function() {
   localStorage.clear();
+  location.reload();
 });
-
