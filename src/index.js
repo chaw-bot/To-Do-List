@@ -85,10 +85,10 @@ list.addEventListener('click', (event) => {
 
 // get  from local storage
 const data = localStorage.getItem('toDo');
- 
+
 // load list
-function loadToDo (array) {
-  array.forEach(function(item){
+function loadToDo(array) {
+  array.forEach((item) => {
     addToDo(item.name, item.i, item.complete, item.remove);
   });
 }
@@ -104,7 +104,7 @@ if (data) {
 }
 
 // clear local storage
-clear.addEventListener('click', function() {
+clear.addEventListener('click', () => {
   localStorage.clear();
   location.reload();
 });
