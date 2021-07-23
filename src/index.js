@@ -20,8 +20,9 @@ function addToDo(toDo, i, complete, remove) {
                     <i class="fa ${done} complete" job="complete" aria-hidden="true" id="${i}"></i>
                     <p class="text" ${line} >${toDo}</p>
                   </div>
-                  <i class="fa fa-trash-o delete" job="delete" aria-hidden="true" id="${i}"></i>
+                  <i class="fa fa-ellipsis-v" aria-hidden="true" id="${i}"></i>
                 </li>`;
+                // <i class="fa fa-trash-o delete" job="delete" aria-hidden="true" id="${i}"></i>
   const position = 'beforeend';
 
   list.insertAdjacentHTML(position, text);

@@ -55,13 +55,13 @@ body {
   justify-content: space-between;
 }
 
-.delete {
+/* .delete {
   cursor: pointer;
 }
 
 .delete:hover {
   color: red;
-}
+} */
 
 .clear {
   border: none;
