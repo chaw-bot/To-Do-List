@@ -22,7 +22,7 @@ function addToDo(toDo, i, complete, remove) {
                   </div>
                   <i class="fa fa-ellipsis-v" aria-hidden="true" id="${i}"></i>
                 </li>`;
-                // <i class="fa fa-trash-o delete" job="delete" aria-hidden="true" id="${i}"></i>
+// <i class="fa fa-trash-o delete" job="delete" aria-hidden="true" id="${i}"></i>
   const position = 'beforeend';
 
   list.insertAdjacentHTML(position, text);
