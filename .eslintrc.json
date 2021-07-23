@@ -22,6 +22,4 @@
     "dist/",
     "build/"
   ]
-
-  "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
 }
